@@ -92,7 +92,7 @@ def label_f1_macro(gt, predict, beta=1):
     tp = quantity[0]
     fp = quantity[1]
     fn = quantity[3]
-    return np.mean((1 + beta**2) * tp / ((1 + beta**2) * tp + beta**2 * fn + fp) + epsilon)
+    return np.mean((1 + beta**2) * tp / ((1 + beta**2) * tp + beta**2 * fn + fp  + epsilon))
 
 
 def label_f1_micro(gt, predict, beta=1):
